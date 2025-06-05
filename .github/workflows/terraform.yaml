@@ -1,6 +1,22 @@
-- name: Terraform init/plan
-  
-  uses: comu2e/tfnotify-composite-action@1.0.4
-  with:
-    # Setup terraform
-    name: # optional
+name: Terraform Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+
+      - name: Terraform Init/Plan
+        run: |
+          terraform init
+          terraform plan
+
