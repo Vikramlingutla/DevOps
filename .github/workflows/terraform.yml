@@ -11,4 +11,3 @@
     terraform_version: # optional, default is latest
     # Whether or not to install a wrapper to wrap subsequent calls of the `terraform` binary and expose its STDOUT, STDERR, and exit code as outputs named `stdout`, `stderr`, and `exitcode` respectively. Defaults to `true`.
     terraform_wrapper: # optional, default is true
-          
