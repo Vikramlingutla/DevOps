@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                https://github.com/Vikramlingutla/DevOps.git
+                echo 'Cloning Repository...'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Building...'
+                echo 'Building the project...'
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                echo 'Deploying application...'
             }
         }
     }
